@@ -7,6 +7,18 @@ out/
 target/
 dist/
 coverage/
+**/bin/
+**/out/
+**/target/
+**/obj/
+**/*.class
+**/*.pdb
+**/*.dll
+**/*.exe
+**/*.test
+**/*.dSYM/
+**/apphost
+**/prime_count_go
 
 # Virtual environments
 .venv/

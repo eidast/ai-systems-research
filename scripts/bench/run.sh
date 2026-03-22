@@ -82,9 +82,13 @@ PY
   CPU_PERCENT="$(python3 - <<PY
 import re, pathlib
 text = pathlib.Path("$RUN_DIR/logs/trial-${trial}.time").read_text()
-match = re.search(r"([0-9.]+)%\s+cpu", text)
+first = text.splitlines()[0] if text.splitlines() else ''
+match = re.search(r"\s*([0-9.]+)\s+real\s+([0-9.]+)\s+user\s+([0-9.]+)\s+sys", first)
 if match:
-    print(float(match.group(1)))
+    real = float(match.group(1))
+    user = float(match.group(2))
+    sysv = float(match.group(3))
+    print(round(((user + sysv) / real) * 100, 3) if real > 0 else 0)
 else:
     print(0)
 PY
