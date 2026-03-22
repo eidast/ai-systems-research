@@ -1,0 +1,1 @@
+{"language":"rust","benchmark_id":"con-producer-consumer-pipeline","optimization_stage":"baseline","ai_used":true,"notes":"Rust bounded-channel producer/consumer implementation."}

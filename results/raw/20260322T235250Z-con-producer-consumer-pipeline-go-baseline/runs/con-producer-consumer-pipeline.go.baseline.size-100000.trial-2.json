@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "20260322T235250Z-con-producer-consumer-pipeline-go-baseline",
+  "benchmark": {
+    "id": "con-producer-consumer-pipeline",
+    "category": "concurrency",
+    "benchmark_tier": "component",
+    "architectural_analog": "bounded internal pipeline / worker queue"
+  },
+  "implementation": {
+    "language": "go",
+    "runtime": "bootstrap-local",
+    "mode": "baseline",
+    "implementation_version": "git:85fd895"
+  },
+  "parameters": {
+    "input_size": "100000",
+    "trial": 2,
+    "warmup_completed": true
+  },
+  "metrics": {
+    "wall_time_ms": 62.611,
+    "cpu_percent_avg": 400.0,
+    "cpu_percent_peak": 400.0,
+    "mem_peak_mb": 21.922,
+    "exit_code": 0
+  },
+  "quality": {
+    "correctness_passed": true,
+    "warnings": []
+  },
+  "timestamps": {
+    "started_at": "2026-03-22T23:52:51Z",
+    "finished_at": "2026-03-22T23:52:51Z"
+  }
+}

@@ -1,0 +1,1 @@
+{"language":"go","benchmark_id":"con-producer-consumer-pipeline","optimization_stage":"baseline","ai_used":true,"notes":"Go bounded-channel producer/consumer implementation."}
