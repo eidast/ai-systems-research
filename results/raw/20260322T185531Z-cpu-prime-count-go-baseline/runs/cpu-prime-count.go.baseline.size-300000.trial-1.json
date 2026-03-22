@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "20260322T185531Z-cpu-prime-count-go-baseline",
+  "benchmark": {
+    "id": "cpu-prime-count",
+    "category": "cpu",
+    "benchmark_tier": "micro",
+    "architectural_analog": "pure compute validation engine"
+  },
+  "implementation": {
+    "language": "go",
+    "runtime": "bootstrap-local",
+    "mode": "baseline",
+    "implementation_version": "git:c507465"
+  },
+  "parameters": {
+    "input_size": 300000,
+    "trial": 1,
+    "warmup_completed": true
+  },
+  "metrics": {
+    "wall_time_ms": 60.382,
+    "cpu_percent_avg": 0,
+    "cpu_percent_peak": 0,
+    "mem_peak_mb": 22.203,
+    "exit_code": 0
+  },
+  "quality": {
+    "correctness_passed": true,
+    "warnings": []
+  },
+  "timestamps": {
+    "started_at": "2026-03-22T18:55:34Z",
+    "finished_at": "2026-03-22T18:55:34Z"
+  }
+}
