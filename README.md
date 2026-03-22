@@ -92,11 +92,17 @@ Start here:
 - [Benchmark Suite v1](docs/benchmark-suite.md)
 - [Methodology](docs/methodology.md)
 - [Architecture Overview](docs/architecture-overview.md)
+- [Benchmark Catalog v1](docs/benchmark-catalog.md)
+- [Metrics Schema v1](docs/metrics-schema.md)
+- [Execution Protocol v1](docs/execution-protocol.md)
+- [Decision Framework v1](docs/decision-framework.md)
+- [Project Operating Rules](docs/project-operating-rules.md)
 
 Visual references:
 
 - [Research Workflow Diagram](docs/diagrams/research-workflow.md)
 - [Benchmark Pipeline Diagram](docs/diagrams/benchmark-pipeline.md)
+- [Research Governance Diagram](docs/diagrams/research-governance.md)
 - [Research Mind Map](docs/mindmaps/research-map.md)
 
 ## Principles
@@ -109,18 +115,16 @@ Visual references:
 
 ## Status
 
-Current phase: **Research Design / Repository Bootstrap**
+Current phase: **Research Design / Execution Pack v1**
 
-## Next Recommended Step
+## Current recommended workstream
 
-Finalize the research design baseline:
-
-1. Research questions
-2. Formal hypotheses
-3. Benchmark inventory v1
-4. Measurement protocol
-5. Result schema
-6. Execution strategy
+1. finalize benchmark definitions and schemas
+2. implement the first benchmark family with correctness gates
+3. add execution scripts and environment capture
+4. generate structured raw and curated result artifacts
+5. generate charts and architecture-facing interpretation notes
+6. commit and push every meaningful contribution
 
 ---
 
