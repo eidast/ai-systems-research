@@ -8,6 +8,16 @@ required_paths=(
   "$ROOT_DIR/schemas/benchmark-definition.schema.json"
   "$ROOT_DIR/schemas/benchmark-run.schema.json"
   "$ROOT_DIR/benchmarks/definitions/cpu/cpu-prime-count.yaml"
+  "$ROOT_DIR/benchmarks/definitions/memory/mem-large-json-transform.yaml"
+  "$ROOT_DIR/benchmarks/datasets/generated/mem-large-json-transform-medium.json"
+  "$ROOT_DIR/languages/python/cpu-prime-count/run.sh"
+  "$ROOT_DIR/languages/typescript/cpu-prime-count/run.sh"
+  "$ROOT_DIR/languages/go/cpu-prime-count/run.sh"
+  "$ROOT_DIR/languages/rust/cpu-prime-count/run.sh"
+  "$ROOT_DIR/languages/java/cpu-prime-count/run.sh"
+  "$ROOT_DIR/languages/csharp/cpu-prime-count/run.sh"
+  "$ROOT_DIR/languages/python/mem-large-json-transform/run.sh"
+  "$ROOT_DIR/languages/typescript/mem-large-json-transform/run.sh"
 )
 
 for p in "${required_paths[@]}"; do

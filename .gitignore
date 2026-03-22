@@ -24,6 +24,10 @@ coverage/
 .venv/
 venv/
 
+# Python caches
+**/__pycache__/
+**/*.pyc
+
 # Node
 node_modules/
 

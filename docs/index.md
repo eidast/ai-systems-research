@@ -19,6 +19,8 @@ This directory contains the research design, methodology, benchmark definitions,
 - [Architecture Review (Martin)](./architecture-review-martin.md)
 - [Benchmark Quality Plan (Cesar)](./benchmark-quality-plan-cesar.md)
 - [Tooling Plan (Forge)](./tooling-plan-forge.md)
+- [Testing and Validation](./testing-and-validation.md)
+- [Testing Strategy (Cesar)](./testing-strategy-cesar.md)
 
 ## Visual Documents
 

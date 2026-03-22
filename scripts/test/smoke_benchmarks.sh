@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+cd "$ROOT_DIR"
+DATASET='benchmarks/datasets/generated/mem-large-json-transform-medium.json'
+./scripts/bench/verify.sh
+for lang in python typescript go rust java csharp; do
+  ./languages/$lang/cpu-prime-count/run.sh 1000 >/dev/null
+  echo "cpu smoke ok: $lang"
+done
+for lang in python typescript; do
+  ./languages/$lang/mem-large-json-transform/run.sh "$DATASET" >/dev/null
+  echo "mem smoke ok: $lang"
+done
