@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+
+# Build artifacts
+bin/
+out/
+target/
+dist/
+coverage/
+
+# Virtual environments
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Temporary benchmark artifacts
+.tmp/
+.cache/
+
+# Results can be versioned selectively
+results/raw/*.tmp
