@@ -1,0 +1,27 @@
+defaults:
+  trials: 5
+  timeout_sec: 300
+  warmup_iterations: 3
+  environments: [workstation]
+  modes: [baseline]
+  observability:
+    capture_wall_clock: true
+    capture_cpu: true
+    capture_memory: true
+    capture_start_end_timestamps: true
+
+languages:
+  - python
+  - go
+  - rust
+  - typescript
+  - java
+  - csharp
+
+benchmarks:
+  - id: cpu-prime-count
+    category: cpu
+    tier: micro
+    sizes: [100000, 500000, 1000000]
+    modes: [baseline]
+    languages: [python, go, rust, typescript, java, csharp]

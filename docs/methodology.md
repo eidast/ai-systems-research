@@ -41,18 +41,30 @@ Treat results as workload-sensitive evidence, not ideology.
 - execution time
 - throughput
 - latency (avg, p95, p99 when relevant)
+- start timestamp
+- end timestamp
+- total elapsed wall-clock time
 
 ### Resource Consumption
 - peak memory
 - average memory
 - peak CPU
 - average CPU
+- exit code and correctness status associated with the run
 
 ### Delivery/Engineering Cost
 - implementation complexity
 - build complexity
 - runtime footprint
 - dependency profile
+
+## Active observability baseline
+
+All experiments must preserve a common measurement baseline across languages.
+
+At bootstrap stage, the repository uses an external measurement layer so cross-language comparisons are grounded in the same host-side collection method. Language-specific profilers may be added later as supplemental evidence, but not as a substitute for the shared baseline.
+
+See [Active Observability](./active-observability.md) and [Execution Protocol](./execution-protocol.md).
 
 ## Data Outputs
 

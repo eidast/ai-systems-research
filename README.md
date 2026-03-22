@@ -91,6 +91,7 @@ Start here:
 - [Research Design v1](docs/research-design.md)
 - [Benchmark Suite v1](docs/benchmark-suite.md)
 - [Methodology](docs/methodology.md)
+- [Active Observability](docs/active-observability.md)
 - [Architecture Overview](docs/architecture-overview.md)
 - [Benchmark Catalog v1](docs/benchmark-catalog.md)
 - [Metrics Schema v1](docs/metrics-schema.md)

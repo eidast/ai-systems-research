@@ -1,0 +1,28 @@
+[
+  {
+    "group": {
+      "benchmark_id": "cpu-prime-count",
+      "language": "python",
+      "mode": "baseline",
+      "input_size": 100000
+    },
+    "trials": 2,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 34.011,
+        "median": 34.011,
+        "min": 31.418,
+        "max": 36.604,
+        "stddev": 2.593
+      },
+      "cpu_percent_avg": {
+        "mean": 0,
+        "max": 0
+      },
+      "mem_peak_mb": {
+        "mean": 11.633,
+        "max": 11.766
+      }
+    }
+  }
+]

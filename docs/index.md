@@ -7,6 +7,7 @@ This directory contains the research design, methodology, benchmark definitions,
 - [Research Design v1](./research-design.md)
 - [Benchmark Suite v1](./benchmark-suite.md)
 - [Methodology](./methodology.md)
+- [Active Observability](./active-observability.md)
 - [Architecture Overview](./architecture-overview.md)
 - [Benchmark Catalog v1](./benchmark-catalog.md)
 - [Metrics Schema v1](./metrics-schema.md)
