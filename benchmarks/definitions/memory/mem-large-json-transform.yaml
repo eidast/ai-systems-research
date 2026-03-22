@@ -1,0 +1,29 @@
+id: mem-large-json-transform
+name: Large JSON Transform
+category: memory
+benchmark_tier: component
+architectural_analog: ETL transform stage / ingestion service
+problem_statement: Load a JSON array payload, transform each record into a normalized structure, and emit a reduced summary object.
+semantic_equivalence_rules:
+  - Parse the same input dataset.
+  - Apply the same field mapping and numeric aggregation semantics.
+  - Produce equivalent summary output structure.
+allowed_libraries:
+  python: [standard-library]
+  typescript: [node-standard-library]
+prohibited_shortcuts:
+  - Using external databases or external processing tools.
+  - Skipping parse or transform stages.
+inputs:
+  dataset: generated-json-array
+  default_sizes: [small, medium, large]
+metrics:
+  - wall_time_ms
+  - cpu_percent_avg
+  - cpu_percent_peak
+  - mem_peak_mb
+warmup:
+  iterations: 1
+  required: true
+interpretation_limits:
+  - Component benchmark only; useful for transform-heavy services, not a full distributed ingestion pipeline.

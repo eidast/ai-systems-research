@@ -1,0 +1,1 @@
+{"language":"typescript","benchmark_id":"cpu-prime-count","optimization_stage":"baseline","ai_used":true,"notes":"Node.js implementation using Uint8Array sieve."}

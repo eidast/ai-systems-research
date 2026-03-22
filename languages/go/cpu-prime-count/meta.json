@@ -1,0 +1,1 @@
+{"language":"go","benchmark_id":"cpu-prime-count","optimization_stage":"baseline","ai_used":true,"notes":"Single-file Go implementation compiled by run.sh."}
