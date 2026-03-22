@@ -22,6 +22,9 @@ required_paths=(
   "$ROOT_DIR/languages/rust/mem-large-json-transform/run.sh"
   "$ROOT_DIR/languages/java/mem-large-json-transform/run.sh"
   "$ROOT_DIR/languages/csharp/mem-large-json-transform/run.sh"
+  "$ROOT_DIR/benchmarks/definitions/concurrency/con-producer-consumer-pipeline.yaml"
+  "$ROOT_DIR/languages/python/con-producer-consumer-pipeline/run.sh"
+  "$ROOT_DIR/languages/typescript/con-producer-consumer-pipeline/run.sh"
 )
 
 for p in "${required_paths[@]}"; do

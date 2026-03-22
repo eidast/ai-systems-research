@@ -1,0 +1,1 @@
+{"language":"python","benchmark_id":"con-producer-consumer-pipeline","optimization_stage":"baseline","ai_used":true,"notes":"Python threading + queue benchmark implementation."}

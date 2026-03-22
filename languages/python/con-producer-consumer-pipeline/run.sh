@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -euo pipefail
+python3 "$(dirname "$0")/pipeline.py" "${1:-100000}"

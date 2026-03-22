@@ -53,6 +53,32 @@
   },
   {
     "group": {
+      "benchmark_id": "con-producer-consumer-pipeline",
+      "language": "typescript",
+      "mode": "baseline",
+      "input_size": "100000"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 45.074,
+        "median": 44.985,
+        "min": 44.862,
+        "max": 45.374,
+        "stddev": 0.218
+      },
+      "cpu_percent_avg": {
+        "mean": 100.0,
+        "max": 100.0
+      },
+      "mem_peak_mb": {
+        "mean": 52.891,
+        "max": 52.938
+      }
+    }
+  },
+  {
+    "group": {
       "benchmark_id": "mem-large-json-transform",
       "language": "python",
       "mode": "baseline",
@@ -126,6 +152,32 @@
       "mem_peak_mb": {
         "mean": 216.245,
         "max": 217.859
+      }
+    }
+  },
+  {
+    "group": {
+      "benchmark_id": "con-producer-consumer-pipeline",
+      "language": "python",
+      "mode": "baseline",
+      "input_size": "100000"
+    },
+    "trials": 6,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 122.16,
+        "median": 121.184,
+        "min": 120.474,
+        "max": 127.555,
+        "stddev": 2.439
+      },
+      "cpu_percent_avg": {
+        "mean": 100.0,
+        "max": 100.0
+      },
+      "mem_peak_mb": {
+        "mean": 12.427,
+        "max": 12.641
       }
     }
   },

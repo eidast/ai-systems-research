@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "20260322T233549Z-con-producer-consumer-pipeline-python-baseline",
+  "benchmark": {
+    "id": "con-producer-consumer-pipeline",
+    "category": "concurrency",
+    "benchmark_tier": "component",
+    "architectural_analog": "bounded internal pipeline / worker queue"
+  },
+  "implementation": {
+    "language": "python",
+    "runtime": "bootstrap-local",
+    "mode": "baseline",
+    "implementation_version": "git:b64b22f"
+  },
+  "parameters": {
+    "input_size": "100000",
+    "trial": 1,
+    "warmup_completed": true
+  },
+  "metrics": {
+    "wall_time_ms": 120.985,
+    "cpu_percent_avg": 100.0,
+    "cpu_percent_peak": 100.0,
+    "mem_peak_mb": 12.328,
+    "exit_code": 0
+  },
+  "quality": {
+    "correctness_passed": true,
+    "warnings": []
+  },
+  "timestamps": {
+    "started_at": "2026-03-22T23:35:49Z",
+    "finished_at": "2026-03-22T23:35:50Z"
+  }
+}

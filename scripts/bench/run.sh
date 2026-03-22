@@ -41,6 +41,13 @@ case "$BENCHMARK_ID" in
     IMPLEMENTATION_SCRIPT="$ROOT_DIR/languages/$LANGUAGE/mem-large-json-transform/run.sh"
     RUN_ARG="$INPUT_SIZE"
     ;;
+  con-producer-consumer-pipeline)
+    BENCH_CATEGORY="concurrency"
+    BENCH_TIER="component"
+    BENCH_ANALOG="bounded internal pipeline / worker queue"
+    IMPLEMENTATION_SCRIPT="$ROOT_DIR/languages/$LANGUAGE/con-producer-consumer-pipeline/run.sh"
+    RUN_ARG="$INPUT_SIZE"
+    ;;
   *)
     echo "unsupported benchmark for current bootstrap: $BENCHMARK_ID" >&2
     exit 1
@@ -121,6 +128,16 @@ PY
       if ! python3 - <<PY
 import json
 json.loads('''$RESULT_LINE''')
+PY
+      then
+        CORRECTNESS=false
+      fi
+      ;;
+    con-producer-consumer-pipeline)
+      if ! python3 - <<PY
+import json
+payload = json.loads('''$RESULT_LINE''')
+assert 'item_count' in payload and 'value_sum' in payload
 PY
       then
         CORRECTNESS=false

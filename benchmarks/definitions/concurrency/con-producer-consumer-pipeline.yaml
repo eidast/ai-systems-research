@@ -1,0 +1,35 @@
+id: con-producer-consumer-pipeline
+name: Producer Consumer Pipeline
+category: concurrency
+benchmark_tier: component
+architectural_analog: bounded internal pipeline / worker queue
+problem_statement: Process a fixed number of integer work items through a bounded producer-consumer pipeline and return deterministic aggregate results.
+semantic_equivalence_rules:
+  - Generate the same number of work items.
+  - Apply the same transform function to each item.
+  - Preserve total processed item count and deterministic sum.
+  - Use bounded in-process coordination only.
+allowed_libraries:
+  python: [standard-library]
+  typescript: [node-standard-library]
+  go: [standard-library]
+  rust: [standard-library]
+  java: [jdk-standard-library]
+  csharp: [dotnet-standard-library]
+prohibited_shortcuts:
+  - External queues, brokers, or databases.
+  - Skipping the consumer stage.
+inputs:
+  item_count: 100000
+  queue_capacity: 256
+  workers: 4
+metrics:
+  - wall_time_ms
+  - cpu_percent_avg
+  - cpu_percent_peak
+  - mem_peak_mb
+warmup:
+  iterations: 1
+  required: true
+interpretation_limits:
+  - Component benchmark only; useful for concurrency coordination and bounded queue behavior, not distributed messaging conclusions.
