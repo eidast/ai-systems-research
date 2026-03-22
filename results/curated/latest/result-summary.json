@@ -24,5 +24,57 @@
         "max": 11.766
       }
     }
+  },
+  {
+    "group": {
+      "benchmark_id": "cpu-prime-count",
+      "language": "typescript",
+      "mode": "baseline",
+      "input_size": 500000
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 38.614,
+        "median": 37.489,
+        "min": 37.45,
+        "max": 40.902,
+        "stddev": 1.618
+      },
+      "cpu_percent_avg": {
+        "mean": 0,
+        "max": 0
+      },
+      "mem_peak_mb": {
+        "mean": 47.745,
+        "max": 47.875
+      }
+    }
+  },
+  {
+    "group": {
+      "benchmark_id": "cpu-prime-count",
+      "language": "python",
+      "mode": "baseline",
+      "input_size": 500000
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 32.062,
+        "median": 32.067,
+        "min": 31.936,
+        "max": 32.184,
+        "stddev": 0.101
+      },
+      "cpu_percent_avg": {
+        "mean": 0,
+        "max": 0
+      },
+      "mem_peak_mb": {
+        "mean": 12.547,
+        "max": 12.547
+      }
+    }
   }
 ]
