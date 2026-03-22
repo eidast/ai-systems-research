@@ -1,0 +1,1 @@
+{"language":"typescript","benchmark_id":"mem-large-json-transform","optimization_stage":"baseline","ai_used":true,"notes":"Node.js JSON parse/transform implementation."}

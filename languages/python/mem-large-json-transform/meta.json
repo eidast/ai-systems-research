@@ -1,0 +1,1 @@
+{"language":"python","benchmark_id":"mem-large-json-transform","optimization_stage":"baseline","ai_used":true,"notes":"Standard-library JSON transform and aggregation."}

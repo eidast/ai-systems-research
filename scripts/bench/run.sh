@@ -26,24 +26,40 @@ if [[ -z "$BENCHMARK_ID" || -z "$LANGUAGE" || -z "$INPUT_SIZE" ]]; then
   exit 1
 fi
 
-if [[ "$BENCHMARK_ID" != "cpu-prime-count" ]]; then
-  echo "unsupported benchmark for current bootstrap: $BENCHMARK_ID" >&2
-  exit 1
-fi
+case "$BENCHMARK_ID" in
+  cpu-prime-count)
+    BENCH_CATEGORY="cpu"
+    BENCH_TIER="micro"
+    BENCH_ANALOG="pure compute validation engine"
+    IMPLEMENTATION_SCRIPT="$ROOT_DIR/languages/$LANGUAGE/cpu-prime-count/run.sh"
+    RUN_ARG="$INPUT_SIZE"
+    ;;
+  mem-large-json-transform)
+    BENCH_CATEGORY="memory"
+    BENCH_TIER="component"
+    BENCH_ANALOG="ETL transform stage / ingestion service"
+    IMPLEMENTATION_SCRIPT="$ROOT_DIR/languages/$LANGUAGE/mem-large-json-transform/run.sh"
+    RUN_ARG="$INPUT_SIZE"
+    ;;
+  *)
+    echo "unsupported benchmark for current bootstrap: $BENCHMARK_ID" >&2
+    exit 1
+    ;;
+esac
 
 RUN_ID="$(date -u +"%Y%m%dT%H%M%SZ")-${BENCHMARK_ID}-${LANGUAGE}-${MODE}"
 RUN_DIR="$ROOT_DIR/results/raw/$RUN_ID"
+SAFE_INPUT_TAG="$(printf '%s' "$INPUT_SIZE" | sed 's|.*/||; s|[^A-Za-z0-9._-]|_|g')"
 mkdir -p "$RUN_DIR/runs" "$RUN_DIR/logs"
 "$ROOT_DIR/scripts/bench/env-capture.sh" "$RUN_DIR/env.json" >/dev/null
 
-IMPLEMENTATION_SCRIPT="$ROOT_DIR/languages/$LANGUAGE/cpu-prime-count/run.sh"
 if [[ ! -x "$IMPLEMENTATION_SCRIPT" ]]; then
   echo "missing executable implementation: $IMPLEMENTATION_SCRIPT" >&2
   exit 1
 fi
 
 for ((i=1;i<=WARMUPS;i++)); do
-  "$IMPLEMENTATION_SCRIPT" "$INPUT_SIZE" > /dev/null
+  "$IMPLEMENTATION_SCRIPT" "$RUN_ARG" > /dev/null
   echo "warmup $i complete"
 done
 
@@ -55,7 +71,7 @@ print(time.time())
 PY
 )"
   TMP_OUT="$RUN_DIR/logs/trial-${trial}.out"
-  /usr/bin/time -l "$IMPLEMENTATION_SCRIPT" "$INPUT_SIZE" > "$TMP_OUT" 2> "$RUN_DIR/logs/trial-${trial}.time"
+  /usr/bin/time -l "$IMPLEMENTATION_SCRIPT" "$RUN_ARG" > "$TMP_OUT" 2> "$RUN_DIR/logs/trial-${trial}.time"
   EXIT_CODE=$?
   FINISHED_AT="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
   END_EPOCH="$(python3 - <<'PY'
@@ -93,20 +109,38 @@ else:
     print(0)
 PY
 )"
-  PRIME_RESULT="$(tail -n1 "$TMP_OUT" | tr -d '\r')"
+  RESULT_LINE="$(tail -n1 "$TMP_OUT" | tr -d '\r')"
   CORRECTNESS=true
-  if ! [[ "$PRIME_RESULT" =~ ^[0-9]+$ ]]; then
-    CORRECTNESS=false
-  fi
-  cat > "$RUN_DIR/runs/${BENCHMARK_ID}.${LANGUAGE}.${MODE}.size-${INPUT_SIZE}.trial-${trial}.json" <<EOF
+  case "$BENCHMARK_ID" in
+    cpu-prime-count)
+      if ! [[ "$RESULT_LINE" =~ ^[0-9]+$ ]]; then
+        CORRECTNESS=false
+      fi
+      ;;
+    mem-large-json-transform)
+      if ! python3 - <<PY
+import json
+json.loads('''$RESULT_LINE''')
+PY
+      then
+        CORRECTNESS=false
+      fi
+      ;;
+  esac
+  INPUT_JSON="$(python3 - <<PY
+import json
+print(json.dumps("""$INPUT_SIZE"""))
+PY
+)"
+  cat > "$RUN_DIR/runs/${BENCHMARK_ID}.${LANGUAGE}.${MODE}.size-${SAFE_INPUT_TAG}.trial-${trial}.json" <<EOF
 {
   "schema_version": "1.0.0",
   "run_id": "$RUN_ID",
   "benchmark": {
     "id": "$BENCHMARK_ID",
-    "category": "cpu",
-    "benchmark_tier": "micro",
-    "architectural_analog": "pure compute validation engine"
+    "category": "$BENCH_CATEGORY",
+    "benchmark_tier": "$BENCH_TIER",
+    "architectural_analog": "$BENCH_ANALOG"
   },
   "implementation": {
     "language": "$LANGUAGE",
@@ -115,7 +149,7 @@ PY
     "implementation_version": "git:$(git -C "$ROOT_DIR" rev-parse --short HEAD 2>/dev/null || echo unknown)"
   },
   "parameters": {
-    "input_size": $INPUT_SIZE,
+    "input_size": $INPUT_JSON,
     "trial": $trial,
     "warmup_completed": true
   },
