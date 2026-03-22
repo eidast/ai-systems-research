@@ -53,6 +53,32 @@
   },
   {
     "group": {
+      "benchmark_id": "mem-large-json-transform",
+      "language": "python",
+      "mode": "baseline",
+      "input_size": "benchmarks/datasets/generated/mem-large-json-transform-medium.json"
+    },
+    "trials": 6,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 75.861,
+        "median": 76.075,
+        "min": 75.008,
+        "max": 76.31,
+        "stddev": 0.476
+      },
+      "cpu_percent_avg": {
+        "mean": 88.889,
+        "max": 100.0
+      },
+      "mem_peak_mb": {
+        "mean": 42.771,
+        "max": 42.969
+      }
+    }
+  },
+  {
+    "group": {
       "benchmark_id": "cpu-prime-count",
       "language": "typescript",
       "mode": "baseline",
@@ -106,26 +132,52 @@
   {
     "group": {
       "benchmark_id": "mem-large-json-transform",
-      "language": "typescript",
+      "language": "csharp",
       "mode": "baseline",
       "input_size": "benchmarks/datasets/generated/mem-large-json-transform-medium.json"
     },
     "trials": 3,
     "metrics": {
       "wall_time_ms": {
-        "mean": 50.067,
-        "median": 50.073,
+        "mean": 779.471,
+        "median": 776.248,
+        "min": 775.656,
+        "max": 786.509,
+        "stddev": 4.982
+      },
+      "cpu_percent_avg": {
+        "mean": 122.026,
+        "max": 122.667
+      },
+      "mem_peak_mb": {
+        "mean": 220.297,
+        "max": 221.562
+      }
+    }
+  },
+  {
+    "group": {
+      "benchmark_id": "mem-large-json-transform",
+      "language": "typescript",
+      "mode": "baseline",
+      "input_size": "benchmarks/datasets/generated/mem-large-json-transform-medium.json"
+    },
+    "trials": 6,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 51.333,
+        "median": 50.181,
         "min": 49.839,
-        "max": 50.288,
-        "stddev": 0.183
+        "max": 54.436,
+        "stddev": 1.823
       },
       "cpu_percent_avg": {
         "mean": 66.667,
         "max": 66.667
       },
       "mem_peak_mb": {
-        "mean": 81.391,
-        "max": 81.5
+        "mean": 81.31,
+        "max": 81.688
       }
     }
   },
@@ -183,32 +235,6 @@
   },
   {
     "group": {
-      "benchmark_id": "mem-large-json-transform",
-      "language": "python",
-      "mode": "baseline",
-      "input_size": "benchmarks/datasets/generated/mem-large-json-transform-medium.json"
-    },
-    "trials": 3,
-    "metrics": {
-      "wall_time_ms": {
-        "mean": 75.569,
-        "median": 75.455,
-        "min": 75.008,
-        "max": 76.243,
-        "stddev": 0.511
-      },
-      "cpu_percent_avg": {
-        "mean": 94.444,
-        "max": 100.0
-      },
-      "mem_peak_mb": {
-        "mean": 42.823,
-        "max": 42.969
-      }
-    }
-  },
-  {
-    "group": {
       "benchmark_id": "cpu-prime-count",
       "language": "typescript",
       "mode": "baseline",
@@ -235,6 +261,32 @@
   },
   {
     "group": {
+      "benchmark_id": "mem-large-json-transform",
+      "language": "go",
+      "mode": "baseline",
+      "input_size": "benchmarks/datasets/generated/mem-large-json-transform-medium.json"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 92.058,
+        "median": 91.578,
+        "min": 91.472,
+        "max": 93.124,
+        "stddev": 0.755
+      },
+      "cpu_percent_avg": {
+        "mean": 271.429,
+        "max": 271.429
+      },
+      "mem_peak_mb": {
+        "mean": 24.208,
+        "max": 25.359
+      }
+    }
+  },
+  {
+    "group": {
       "benchmark_id": "cpu-prime-count",
       "language": "python",
       "mode": "baseline",
@@ -256,6 +308,58 @@
       "mem_peak_mb": {
         "mean": 12.547,
         "max": 12.547
+      }
+    }
+  },
+  {
+    "group": {
+      "benchmark_id": "mem-large-json-transform",
+      "language": "rust",
+      "mode": "baseline",
+      "input_size": "benchmarks/datasets/generated/mem-large-json-transform-medium.json"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 287.486,
+        "median": 286.013,
+        "min": 283.287,
+        "max": 293.159,
+        "stddev": 4.163
+      },
+      "cpu_percent_avg": {
+        "mean": 0,
+        "max": 0
+      },
+      "mem_peak_mb": {
+        "mean": 11.188,
+        "max": 11.188
+      }
+    }
+  },
+  {
+    "group": {
+      "benchmark_id": "mem-large-json-transform",
+      "language": "java",
+      "mode": "baseline",
+      "input_size": "benchmarks/datasets/generated/mem-large-json-transform-medium.json"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 376.965,
+        "median": 377.46,
+        "min": 342.175,
+        "max": 411.259,
+        "stddev": 28.206
+      },
+      "cpu_percent_avg": {
+        "mean": 200.196,
+        "max": 218.75
+      },
+      "mem_peak_mb": {
+        "mean": 117.359,
+        "max": 119.078
       }
     }
   },

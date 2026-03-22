@@ -8,7 +8,7 @@ for lang in python typescript go rust java csharp; do
   ./languages/$lang/cpu-prime-count/run.sh 1000 >/dev/null
   echo "cpu smoke ok: $lang"
 done
-for lang in python typescript; do
+for lang in python typescript go rust java csharp; do
   ./languages/$lang/mem-large-json-transform/run.sh "$DATASET" >/dev/null
   echo "mem smoke ok: $lang"
 done

@@ -18,6 +18,10 @@ required_paths=(
   "$ROOT_DIR/languages/csharp/cpu-prime-count/run.sh"
   "$ROOT_DIR/languages/python/mem-large-json-transform/run.sh"
   "$ROOT_DIR/languages/typescript/mem-large-json-transform/run.sh"
+  "$ROOT_DIR/languages/go/mem-large-json-transform/run.sh"
+  "$ROOT_DIR/languages/rust/mem-large-json-transform/run.sh"
+  "$ROOT_DIR/languages/java/mem-large-json-transform/run.sh"
+  "$ROOT_DIR/languages/csharp/mem-large-json-transform/run.sh"
 )
 
 for p in "${required_paths[@]}"; do

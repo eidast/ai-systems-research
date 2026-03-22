@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "20260322T221833Z-mem-large-json-transform-typescript-baseline",
+  "benchmark": {
+    "id": "mem-large-json-transform",
+    "category": "memory",
+    "benchmark_tier": "component",
+    "architectural_analog": "ETL transform stage / ingestion service"
+  },
+  "implementation": {
+    "language": "typescript",
+    "runtime": "bootstrap-local",
+    "mode": "baseline",
+    "implementation_version": "git:239ae35"
+  },
+  "parameters": {
+    "input_size": "benchmarks/datasets/generated/mem-large-json-transform-medium.json",
+    "trial": 3,
+    "warmup_completed": true
+  },
+  "metrics": {
+    "wall_time_ms": 54.436,
+    "cpu_percent_avg": 66.667,
+    "cpu_percent_peak": 66.667,
+    "mem_peak_mb": 81.688,
+    "exit_code": 0
+  },
+  "quality": {
+    "correctness_passed": true,
+    "warnings": []
+  },
+  "timestamps": {
+    "started_at": "2026-03-22T22:18:33Z",
+    "finished_at": "2026-03-22T22:18:33Z"
+  }
+}

@@ -1,0 +1,1 @@
+{"language":"go","benchmark_id":"mem-large-json-transform","optimization_stage":"baseline","ai_used":true,"notes":"Go standard-library JSON transform implementation."}

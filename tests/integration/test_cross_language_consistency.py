@@ -18,6 +18,10 @@ CPU_RUNNERS = {
 MEM_RUNNERS = {
     "python": ROOT / "languages/python/mem-large-json-transform/run.sh",
     "typescript": ROOT / "languages/typescript/mem-large-json-transform/run.sh",
+    "go": ROOT / "languages/go/mem-large-json-transform/run.sh",
+    "rust": ROOT / "languages/rust/mem-large-json-transform/run.sh",
+    "java": ROOT / "languages/java/mem-large-json-transform/run.sh",
+    "csharp": ROOT / "languages/csharp/mem-large-json-transform/run.sh",
 }
 
 
