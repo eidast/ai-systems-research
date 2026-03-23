@@ -212,12 +212,35 @@ Direct entrypoint examples:
 ```bash
 ./languages/python/io-large-file-streaming/run.sh benchmarks/datasets/generated/io-large-file-streaming-medium.txt
 ./languages/typescript/io-large-file-streaming/run.sh benchmarks/datasets/generated/io-large-file-streaming-medium.txt
+./languages/go/io-large-file-streaming/run.sh benchmarks/datasets/generated/io-large-file-streaming-medium.txt
+./languages/rust/io-large-file-streaming/run.sh benchmarks/datasets/generated/io-large-file-streaming-medium.txt
+./languages/java/io-large-file-streaming/run.sh benchmarks/datasets/generated/io-large-file-streaming-medium.txt
+./languages/csharp/io-large-file-streaming/run.sh benchmarks/datasets/generated/io-large-file-streaming-medium.txt
 ```
 
 Measured run through the common benchmark runner:
 
 ```bash
 ./scripts/bench/run.sh --benchmark io-large-file-streaming --language python --input-size benchmarks/datasets/generated/io-large-file-streaming-medium.txt --trials 3 --warmups 1
+```
+
+#### Parallelism — parallel reduction
+
+Direct entrypoint examples:
+
+```bash
+./languages/python/par-parallel-reduction/run.sh 200000
+./languages/typescript/par-parallel-reduction/run.sh 200000
+./languages/go/par-parallel-reduction/run.sh 200000
+./languages/rust/par-parallel-reduction/run.sh 200000
+./languages/java/par-parallel-reduction/run.sh 200000
+./languages/csharp/par-parallel-reduction/run.sh 200000
+```
+
+Measured run through the common benchmark runner:
+
+```bash
+./scripts/bench/run.sh --benchmark par-parallel-reduction --language python --input-size 200000 --trials 3 --warmups 1
 ```
 
 ### 4. Regenerate summaries, charts, and reports

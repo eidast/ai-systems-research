@@ -392,6 +392,10 @@ At this point, the investigation has moved from concept to working comparative s
 - `io-large-file-streaming`
 - implemented across the main language set
 
+#### Parallelism
+- `par-parallel-reduction`
+- implemented across the main language set
+
 ### Operational capabilities now present
 
 - multi-language benchmark definitions
@@ -429,7 +433,7 @@ The project is strong, but not complete.
 
 Important next phases still include:
 
-- parallelism-focused benchmark family
+- strengthening the parallelism family beyond its first benchmark
 - stronger correctness gates inside the runner itself
 - richer charts (heatmaps, normalized comparisons, decision matrices)
 - hardening of report metadata to avoid drift between actual run counts and rendered narrative

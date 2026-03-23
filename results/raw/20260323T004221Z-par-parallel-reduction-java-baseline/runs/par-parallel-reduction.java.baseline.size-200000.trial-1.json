@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "20260323T004221Z-par-parallel-reduction-java-baseline",
+  "benchmark": {
+    "id": "par-parallel-reduction",
+    "category": "parallelism",
+    "benchmark_tier": "component",
+    "architectural_analog": "analytics reduction stage / batch parallel worker reduction"
+  },
+  "implementation": {
+    "language": "java",
+    "runtime": "bootstrap-local",
+    "mode": "baseline",
+    "implementation_version": "git:9c2105b"
+  },
+  "parameters": {
+    "input_size": "200000",
+    "trial": 1,
+    "warmup_completed": true
+  },
+  "metrics": {
+    "wall_time_ms": 280.386,
+    "cpu_percent_avg": 230.769,
+    "cpu_percent_peak": 230.769,
+    "mem_peak_mb": 102.75,
+    "exit_code": 0
+  },
+  "quality": {
+    "correctness_passed": true,
+    "warnings": []
+  },
+  "timestamps": {
+    "started_at": "2026-03-23T00:42:22Z",
+    "finished_at": "2026-03-23T00:42:22Z"
+  }
+}

@@ -1,0 +1,34 @@
+id: par-parallel-reduction
+name: Parallel Reduction
+category: parallelism
+benchmark_tier: component
+architectural_analog: analytics reduction stage / batch parallel worker reduction
+problem_statement: Partition a deterministic numeric range into worker chunks, compute the same transform per item in parallel, and reduce to a final deterministic aggregate.
+semantic_equivalence_rules:
+  - Use the same item count.
+  - Apply the same transform function to every item.
+  - Preserve deterministic final aggregate.
+  - Use in-process parallel execution only.
+allowed_libraries:
+  python: [standard-library]
+  typescript: [node-standard-library]
+  go: [standard-library]
+  rust: [standard-library]
+  java: [jdk-standard-library]
+  csharp: [dotnet-standard-library]
+prohibited_shortcuts:
+  - External distributed systems.
+  - Skipping partitioning or reduction phases.
+inputs:
+  item_count: 200000
+  workers: 4
+metrics:
+  - wall_time_ms
+  - cpu_percent_avg
+  - cpu_percent_peak
+  - mem_peak_mb
+warmup:
+  iterations: 1
+  required: true
+interpretation_limits:
+  - Component benchmark only; useful for local multicore reduction patterns, not cluster-scale analytics conclusions.

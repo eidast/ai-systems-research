@@ -1,0 +1,1 @@
+{"language":"csharp","benchmark_id":"par-parallel-reduction","optimization_stage":"baseline","ai_used":true,"notes":"C# task-based parallel reduction implementation."}

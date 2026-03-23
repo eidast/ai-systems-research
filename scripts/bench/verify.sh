@@ -33,6 +33,13 @@ required_paths=(
   "$ROOT_DIR/languages/rust/io-large-file-streaming/run.sh"
   "$ROOT_DIR/languages/java/io-large-file-streaming/run.sh"
   "$ROOT_DIR/languages/csharp/io-large-file-streaming/run.sh"
+  "$ROOT_DIR/benchmarks/definitions/parallelism/par-parallel-reduction.yaml"
+  "$ROOT_DIR/languages/python/par-parallel-reduction/run.sh"
+  "$ROOT_DIR/languages/typescript/par-parallel-reduction/run.sh"
+  "$ROOT_DIR/languages/go/par-parallel-reduction/run.sh"
+  "$ROOT_DIR/languages/rust/par-parallel-reduction/run.sh"
+  "$ROOT_DIR/languages/java/par-parallel-reduction/run.sh"
+  "$ROOT_DIR/languages/csharp/par-parallel-reduction/run.sh"
 )
 
 for p in "${required_paths[@]}"; do

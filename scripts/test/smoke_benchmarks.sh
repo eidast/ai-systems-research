@@ -21,3 +21,7 @@ for lang in python typescript go rust java csharp; do
   ./languages/$lang/io-large-file-streaming/run.sh "$IO_DATASET" >/dev/null
   echo "io smoke ok: $lang"
 done
+for lang in python typescript go rust java csharp; do
+  ./languages/$lang/par-parallel-reduction/run.sh 2000 >/dev/null
+  echo "parallelism smoke ok: $lang"
+done

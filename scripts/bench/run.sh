@@ -55,6 +55,13 @@ case "$BENCHMARK_ID" in
     IMPLEMENTATION_SCRIPT="$ROOT_DIR/languages/$LANGUAGE/io-large-file-streaming/run.sh"
     RUN_ARG="$INPUT_SIZE"
     ;;
+  par-parallel-reduction)
+    BENCH_CATEGORY="parallelism"
+    BENCH_TIER="component"
+    BENCH_ANALOG="analytics reduction stage / batch parallel worker reduction"
+    IMPLEMENTATION_SCRIPT="$ROOT_DIR/languages/$LANGUAGE/par-parallel-reduction/run.sh"
+    RUN_ARG="$INPUT_SIZE"
+    ;;
   *)
     echo "unsupported benchmark for current bootstrap: $BENCHMARK_ID" >&2
     exit 1
@@ -155,6 +162,16 @@ PY
 import json
 payload = json.loads('''$RESULT_LINE''')
 assert 'total_records' in payload and 'categories' in payload
+PY
+      then
+        CORRECTNESS=false
+      fi
+      ;;
+    par-parallel-reduction)
+      if ! python3 - <<PY
+import json
+payload = json.loads('''$RESULT_LINE''')
+assert 'item_count' in payload and 'value_sum' in payload
 PY
       then
         CORRECTNESS=false

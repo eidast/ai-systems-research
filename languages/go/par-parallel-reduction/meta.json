@@ -1,0 +1,1 @@
+{"language":"go","benchmark_id":"par-parallel-reduction","optimization_stage":"baseline","ai_used":true,"notes":"Go goroutine reduction implementation."}

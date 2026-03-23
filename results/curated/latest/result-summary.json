@@ -79,6 +79,32 @@
   },
   {
     "group": {
+      "benchmark_id": "par-parallel-reduction",
+      "language": "csharp",
+      "mode": "baseline",
+      "input_size": "200000"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 628.191,
+        "median": 623.37,
+        "min": 622.221,
+        "max": 638.981,
+        "stddev": 7.644
+      },
+      "cpu_percent_avg": {
+        "mean": 123.082,
+        "max": 123.333
+      },
+      "mem_peak_mb": {
+        "mean": 216.042,
+        "max": 219.844
+      }
+    }
+  },
+  {
+    "group": {
       "benchmark_id": "con-producer-consumer-pipeline",
       "language": "typescript",
       "mode": "baseline",
@@ -391,6 +417,32 @@
   },
   {
     "group": {
+      "benchmark_id": "par-parallel-reduction",
+      "language": "go",
+      "mode": "baseline",
+      "input_size": "200000"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 80.616,
+        "median": 67.495,
+        "min": 65.47,
+        "max": 108.884,
+        "stddev": 20.005
+      },
+      "cpu_percent_avg": {
+        "mean": 318.519,
+        "max": 400.0
+      },
+      "mem_peak_mb": {
+        "mean": 22.172,
+        "max": 22.297
+      }
+    }
+  },
+  {
+    "group": {
       "benchmark_id": "con-producer-consumer-pipeline",
       "language": "java",
       "mode": "baseline",
@@ -438,6 +490,32 @@
       "mem_peak_mb": {
         "mean": 24.208,
         "max": 25.359
+      }
+    }
+  },
+  {
+    "group": {
+      "benchmark_id": "par-parallel-reduction",
+      "language": "python",
+      "mode": "baseline",
+      "input_size": "200000"
+    },
+    "trials": 6,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 98.075,
+        "median": 97.198,
+        "min": 95.501,
+        "max": 104.327,
+        "stddev": 2.969
+      },
+      "cpu_percent_avg": {
+        "mean": 266.071,
+        "max": 285.714
+      },
+      "mem_peak_mb": {
+        "mean": 19.995,
+        "max": 20.359
       }
     }
   },
@@ -516,6 +594,32 @@
       "mem_peak_mb": {
         "mean": 11.188,
         "max": 11.188
+      }
+    }
+  },
+  {
+    "group": {
+      "benchmark_id": "par-parallel-reduction",
+      "language": "rust",
+      "mode": "baseline",
+      "input_size": "200000"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 173.422,
+        "median": 161.967,
+        "min": 156.706,
+        "max": 201.592,
+        "stddev": 20.035
+      },
+      "cpu_percent_avg": {
+        "mean": 9.295,
+        "max": 12.5
+      },
+      "mem_peak_mb": {
+        "mean": 1.797,
+        "max": 1.922
       }
     }
   },
@@ -698,6 +802,58 @@
       "mem_peak_mb": {
         "mean": 121.922,
         "max": 124.406
+      }
+    }
+  },
+  {
+    "group": {
+      "benchmark_id": "par-parallel-reduction",
+      "language": "typescript",
+      "mode": "baseline",
+      "input_size": "200000"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 36.205,
+        "median": 35.972,
+        "min": 35.843,
+        "max": 36.8,
+        "stddev": 0.424
+      },
+      "cpu_percent_avg": {
+        "mean": 66.667,
+        "max": 100.0
+      },
+      "mem_peak_mb": {
+        "mean": 46.932,
+        "max": 47.0
+      }
+    }
+  },
+  {
+    "group": {
+      "benchmark_id": "par-parallel-reduction",
+      "language": "java",
+      "mode": "baseline",
+      "input_size": "200000"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 314.956,
+        "median": 281.248,
+        "min": 280.386,
+        "max": 383.234,
+        "stddev": 48.281
+      },
+      "cpu_percent_avg": {
+        "mean": 209.971,
+        "max": 230.769
+      },
+      "mem_peak_mb": {
+        "mean": 103.578,
+        "max": 106.938
       }
     }
   }

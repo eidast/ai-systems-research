@@ -1,0 +1,1 @@
+{"language":"java","benchmark_id":"par-parallel-reduction","optimization_stage":"baseline","ai_used":true,"notes":"Java thread-based parallel reduction implementation."}
