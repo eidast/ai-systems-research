@@ -99,6 +99,7 @@ Start here:
 - [Decision Framework v1](docs/decision-framework.md)
 - [Project Operating Rules](docs/project-operating-rules.md)
 - [Language Runtime Availability](docs/language-runtime-availability.md)
+- [Intermediate Findings v1](docs/intermediate-findings-v1.md)
 
 Visual references:
 

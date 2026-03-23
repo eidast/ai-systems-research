@@ -408,18 +408,33 @@ At this point, the investigation has moved from concept to working comparative s
 - benchmark execution instructions
 - living research narrative
 
-## 18. What still remains
+## 18. A new phase: intermediate synthesis begins
+
+Once CPU, memory, concurrency, and I/O were all operational across the main language set, the project reached an important transition point.
+
+The research could no longer be described only as benchmark construction. It had enough evidence to justify a first synthesis pass.
+
+That synthesis step produced an intermediate findings layer intended to answer questions like:
+
+- what patterns are already visible across benchmark families?
+- which language/runtime profiles are emerging?
+- what can an architect provisionally conclude without overclaiming?
+- what should be treated as signal vs what still needs optimization work?
+
+This was important because the project needed to start turning data into architecture guidance, not just produce more raw result artifacts.
+
+## 19. What still remains
 
 The project is strong, but not complete.
 
 Important next phases still include:
 
-- completing the I/O benchmark family across languages
 - parallelism-focused benchmark family
 - stronger correctness gates inside the runner itself
 - richer charts (heatmaps, normalized comparisons, decision matrices)
 - hardening of report metadata to avoid drift between actual run counts and rendered narrative
 - possible later introduction of Assembly as a special-case benchmark participant for carefully selected CPU tests
+- deeper interpretation and publication-oriented writing from the current benchmark corpus
 
 ## 19. Narrative significance
 
