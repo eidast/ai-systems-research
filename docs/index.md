@@ -16,6 +16,7 @@ This directory contains the research design, methodology, benchmark definitions,
 - [Decision Framework v1](./decision-framework.md)
 - [Project Operating Rules](./project-operating-rules.md)
 - [Language Runtime Availability](./language-runtime-availability.md)
+- [Research Narrative](./research-narrative.md)
 - [Architecture Review (Martin)](./architecture-review-martin.md)
 - [Benchmark Quality Plan (Cesar)](./benchmark-quality-plan-cesar.md)
 - [Tooling Plan (Forge)](./tooling-plan-forge.md)

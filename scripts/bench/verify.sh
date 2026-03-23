@@ -25,6 +25,10 @@ required_paths=(
   "$ROOT_DIR/benchmarks/definitions/concurrency/con-producer-consumer-pipeline.yaml"
   "$ROOT_DIR/languages/python/con-producer-consumer-pipeline/run.sh"
   "$ROOT_DIR/languages/typescript/con-producer-consumer-pipeline/run.sh"
+  "$ROOT_DIR/benchmarks/definitions/io/io-large-file-streaming.yaml"
+  "$ROOT_DIR/scripts/data/generate_io_large_file.py"
+  "$ROOT_DIR/languages/python/io-large-file-streaming/run.sh"
+  "$ROOT_DIR/languages/typescript/io-large-file-streaming/run.sh"
 )
 
 for p in "${required_paths[@]}"; do

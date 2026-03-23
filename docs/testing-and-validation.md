@@ -25,6 +25,7 @@ Current scope:
 - `cpu-prime-count` across Python, TypeScript, Go, Rust, Java, C#
 - `mem-large-json-transform` across Python, TypeScript, Go, Rust, Java, C#
 - `con-producer-consumer-pipeline` across Python and TypeScript
+- `io-large-file-streaming` across Python and TypeScript
 
 ### 3. Runner validation
 `verify.sh` ensures required files and base tools exist before benchmark execution.

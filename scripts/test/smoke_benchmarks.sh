@@ -16,3 +16,8 @@ for lang in python typescript; do
   ./languages/$lang/con-producer-consumer-pipeline/run.sh 1000 >/dev/null
   echo "concurrency smoke ok: $lang"
 done
+IO_DATASET='benchmarks/datasets/generated/io-large-file-streaming-medium.txt'
+for lang in python typescript; do
+  ./languages/$lang/io-large-file-streaming/run.sh "$IO_DATASET" >/dev/null
+  echo "io smoke ok: $lang"
+done

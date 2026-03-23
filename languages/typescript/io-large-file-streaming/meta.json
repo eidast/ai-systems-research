@@ -1,0 +1,1 @@
+{"language":"typescript","benchmark_id":"io-large-file-streaming","optimization_stage":"baseline","ai_used":true,"notes":"Node readline-based line streaming implementation."}

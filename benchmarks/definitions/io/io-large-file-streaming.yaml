@@ -1,0 +1,34 @@
+id: io-large-file-streaming
+name: Large File Streaming
+category: io
+benchmark_tier: component
+architectural_analog: file ingestion / streaming transform stage
+problem_statement: Stream a newline-delimited text file, parse each line, compute deterministic aggregates, and emit a JSON summary without loading the full file into memory at once.
+semantic_equivalence_rules:
+  - Read the same input file.
+  - Process line-by-line in streaming style.
+  - Produce equivalent deterministic aggregate output.
+  - Avoid full-file materialization as the primary processing strategy.
+allowed_libraries:
+  python: [standard-library]
+  typescript: [node-standard-library]
+  go: [standard-library]
+  rust: [standard-library]
+  java: [jdk-standard-library]
+  csharp: [dotnet-standard-library]
+prohibited_shortcuts:
+  - Reading the entire file into memory as the primary path.
+  - Using external shell pipelines or databases.
+inputs:
+  dataset: generated-ndjson-like-lines
+  default_size: medium
+metrics:
+  - wall_time_ms
+  - cpu_percent_avg
+  - cpu_percent_peak
+  - mem_peak_mb
+warmup:
+  iterations: 1
+  required: true
+interpretation_limits:
+  - Component benchmark only; useful for streaming ingestion and line-oriented processing, not full network storage systems.

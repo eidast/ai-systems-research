@@ -198,6 +198,27 @@ Measured run through the common benchmark runner:
 ./scripts/bench/run.sh --benchmark con-producer-consumer-pipeline --language python --input-size 100000 --trials 3 --warmups 1
 ```
 
+#### I/O — large file streaming
+
+First ensure dataset exists:
+
+```bash
+python3 scripts/data/generate_io_large_file.py
+```
+
+Direct entrypoint examples:
+
+```bash
+./languages/python/io-large-file-streaming/run.sh benchmarks/datasets/generated/io-large-file-streaming-medium.txt
+./languages/typescript/io-large-file-streaming/run.sh benchmarks/datasets/generated/io-large-file-streaming-medium.txt
+```
+
+Measured run through the common benchmark runner:
+
+```bash
+./scripts/bench/run.sh --benchmark io-large-file-streaming --language python --input-size benchmarks/datasets/generated/io-large-file-streaming-medium.txt --trials 3 --warmups 1
+```
+
 ### 4. Regenerate summaries, charts, and reports
 
 ```bash
