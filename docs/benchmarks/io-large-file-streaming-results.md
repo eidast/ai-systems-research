@@ -4,11 +4,15 @@
 
 | Language | Mean ms | Median ms | Max RSS MB | CPU avg % | Trials |
 |---|---:|---:|---:|---:|---:|
-| typescript | 98.378 | 98.317 | 61.719 | 100.0 | 3 |
-| python | 135.846 | 135.846 | 11.576 | 92.803 | 6 |
+| go | 77.88 | 77.942 | 22.323 | 283.333 | 3 |
+| typescript | 99.648 | 98.641 | 61.63 | 100.0 | 6 |
+| python | 135.907 | 135.582 | 11.556 | 94.276 | 9 |
+| rust | 334.507 | 335.875 | 1.943 | 56.99 | 3 |
+| java | 418.019 | 434.841 | 121.922 | 211.034 | 3 |
+| csharp | 758.015 | 757.538 | 219.641 | 116.741 | 3 |
 
 ## Interpretation notes
 
-- Initial I/O benchmark bootstrap across Python and TypeScript.
-- Streaming line-oriented processing without full-file materialization.
+- I/O benchmark now covers the full main language set.
+- Processing is line-oriented and intended to avoid full-file materialization as the benchmark story.
 - Raw evidence is preserved under `results/raw/` and curated summary under `results/curated/latest/`.

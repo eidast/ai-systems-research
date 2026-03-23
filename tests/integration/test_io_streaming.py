@@ -8,6 +8,10 @@ DATASET = ROOT / 'benchmarks/datasets/generated/io-large-file-streaming-medium.t
 RUNNERS = {
     'python': ROOT / 'languages/python/io-large-file-streaming/run.sh',
     'typescript': ROOT / 'languages/typescript/io-large-file-streaming/run.sh',
+    'go': ROOT / 'languages/go/io-large-file-streaming/run.sh',
+    'rust': ROOT / 'languages/rust/io-large-file-streaming/run.sh',
+    'java': ROOT / 'languages/java/io-large-file-streaming/run.sh',
+    'csharp': ROOT / 'languages/csharp/io-large-file-streaming/run.sh',
 }
 
 

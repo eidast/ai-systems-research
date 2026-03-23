@@ -390,7 +390,7 @@ At this point, the investigation has moved from concept to working comparative s
 
 #### I/O
 - `io-large-file-streaming`
-- bootstrap phase started
+- implemented across the main language set
 
 ### Operational capabilities now present
 

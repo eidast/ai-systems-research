@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "20260323T002656Z-io-large-file-streaming-csharp-baseline",
+  "benchmark": {
+    "id": "io-large-file-streaming",
+    "category": "io",
+    "benchmark_tier": "component",
+    "architectural_analog": "file ingestion / streaming transform stage"
+  },
+  "implementation": {
+    "language": "csharp",
+    "runtime": "bootstrap-local",
+    "mode": "baseline",
+    "implementation_version": "git:b439721"
+  },
+  "parameters": {
+    "input_size": "benchmarks/datasets/generated/io-large-file-streaming-medium.txt",
+    "trial": 1,
+    "warmup_completed": true
+  },
+  "metrics": {
+    "wall_time_ms": 752.609,
+    "cpu_percent_avg": 116.438,
+    "cpu_percent_peak": 116.438,
+    "mem_peak_mb": 219.688,
+    "exit_code": 0
+  },
+  "quality": {
+    "correctness_passed": true,
+    "warnings": []
+  },
+  "timestamps": {
+    "started_at": "2026-03-23T00:26:57Z",
+    "finished_at": "2026-03-23T00:26:58Z"
+  }
+}

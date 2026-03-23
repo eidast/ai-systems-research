@@ -1,0 +1,1 @@
+{"language":"go","benchmark_id":"io-large-file-streaming","optimization_stage":"baseline","ai_used":true,"notes":"Go scanner-based streaming implementation."}

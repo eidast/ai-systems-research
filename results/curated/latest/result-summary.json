@@ -58,21 +58,21 @@
       "mode": "baseline",
       "input_size": "benchmarks/datasets/generated/io-large-file-streaming-medium.txt"
     },
-    "trials": 6,
+    "trials": 9,
     "metrics": {
       "wall_time_ms": {
-        "mean": 135.846,
-        "median": 135.846,
+        "mean": 135.907,
+        "median": 135.582,
         "min": 129.911,
         "max": 141.596,
-        "stddev": 4.166
+        "stddev": 3.765
       },
       "cpu_percent_avg": {
-        "mean": 92.803,
+        "mean": 94.276,
         "max": 100.0
       },
       "mem_peak_mb": {
-        "mean": 11.576,
+        "mean": 11.556,
         "max": 11.797
       }
     }
@@ -313,6 +313,32 @@
   },
   {
     "group": {
+      "benchmark_id": "io-large-file-streaming",
+      "language": "go",
+      "mode": "baseline",
+      "input_size": "benchmarks/datasets/generated/io-large-file-streaming-medium.txt"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 77.88,
+        "median": 77.942,
+        "min": 77.204,
+        "max": 78.495,
+        "stddev": 0.529
+      },
+      "cpu_percent_avg": {
+        "mean": 283.333,
+        "max": 283.333
+      },
+      "mem_peak_mb": {
+        "mean": 22.323,
+        "max": 22.406
+      }
+    }
+  },
+  {
+    "group": {
       "benchmark_id": "cpu-prime-count",
       "language": "go",
       "mode": "baseline",
@@ -417,6 +443,32 @@
   },
   {
     "group": {
+      "benchmark_id": "io-large-file-streaming",
+      "language": "csharp",
+      "mode": "baseline",
+      "input_size": "benchmarks/datasets/generated/io-large-file-streaming-medium.txt"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 758.015,
+        "median": 757.538,
+        "min": 752.609,
+        "max": 763.897,
+        "stddev": 4.621
+      },
+      "cpu_percent_avg": {
+        "mean": 116.741,
+        "max": 117.568
+      },
+      "mem_peak_mb": {
+        "mean": 219.641,
+        "max": 219.75
+      }
+    }
+  },
+  {
+    "group": {
       "benchmark_id": "cpu-prime-count",
       "language": "python",
       "mode": "baseline",
@@ -495,6 +547,32 @@
   },
   {
     "group": {
+      "benchmark_id": "io-large-file-streaming",
+      "language": "rust",
+      "mode": "baseline",
+      "input_size": "benchmarks/datasets/generated/io-large-file-streaming-medium.txt"
+    },
+    "trials": 3,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 334.507,
+        "median": 335.875,
+        "min": 331.248,
+        "max": 336.398,
+        "stddev": 2.314
+      },
+      "cpu_percent_avg": {
+        "mean": 56.99,
+        "max": 58.065
+      },
+      "mem_peak_mb": {
+        "mean": 1.943,
+        "max": 1.953
+      }
+    }
+  },
+  {
+    "group": {
       "benchmark_id": "mem-large-json-transform",
       "language": "java",
       "mode": "baseline",
@@ -547,6 +625,32 @@
   },
   {
     "group": {
+      "benchmark_id": "io-large-file-streaming",
+      "language": "typescript",
+      "mode": "baseline",
+      "input_size": "benchmarks/datasets/generated/io-large-file-streaming-medium.txt"
+    },
+    "trials": 6,
+    "metrics": {
+      "wall_time_ms": {
+        "mean": 99.648,
+        "median": 98.641,
+        "min": 97.771,
+        "max": 105.694,
+        "stddev": 2.759
+      },
+      "cpu_percent_avg": {
+        "mean": 100.0,
+        "max": 100.0
+      },
+      "mem_peak_mb": {
+        "mean": 61.63,
+        "max": 62.0
+      }
+    }
+  },
+  {
+    "group": {
       "benchmark_id": "con-producer-consumer-pipeline",
       "language": "csharp",
       "mode": "baseline",
@@ -574,26 +678,26 @@
   {
     "group": {
       "benchmark_id": "io-large-file-streaming",
-      "language": "typescript",
+      "language": "java",
       "mode": "baseline",
       "input_size": "benchmarks/datasets/generated/io-large-file-streaming-medium.txt"
     },
     "trials": 3,
     "metrics": {
       "wall_time_ms": {
-        "mean": 98.378,
-        "median": 98.317,
-        "min": 97.852,
-        "max": 98.965,
-        "stddev": 0.456
+        "mean": 418.019,
+        "median": 434.841,
+        "min": 374.658,
+        "max": 444.559,
+        "stddev": 30.917
       },
       "cpu_percent_avg": {
-        "mean": 100.0,
-        "max": 100.0
+        "mean": 211.034,
+        "max": 242.857
       },
       "mem_peak_mb": {
-        "mean": 61.719,
-        "max": 61.875
+        "mean": 121.922,
+        "max": 124.406
       }
     }
   }

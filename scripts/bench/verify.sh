@@ -29,6 +29,10 @@ required_paths=(
   "$ROOT_DIR/scripts/data/generate_io_large_file.py"
   "$ROOT_DIR/languages/python/io-large-file-streaming/run.sh"
   "$ROOT_DIR/languages/typescript/io-large-file-streaming/run.sh"
+  "$ROOT_DIR/languages/go/io-large-file-streaming/run.sh"
+  "$ROOT_DIR/languages/rust/io-large-file-streaming/run.sh"
+  "$ROOT_DIR/languages/java/io-large-file-streaming/run.sh"
+  "$ROOT_DIR/languages/csharp/io-large-file-streaming/run.sh"
 )
 
 for p in "${required_paths[@]}"; do

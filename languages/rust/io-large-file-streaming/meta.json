@@ -1,0 +1,1 @@
+{"language":"rust","benchmark_id":"io-large-file-streaming","optimization_stage":"baseline","ai_used":true,"notes":"Rust BufReader streaming implementation."}
